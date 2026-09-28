@@ -1,45 +1,33 @@
-📝 CLI Todo App
+# CLI Todo App
 
-A simple and functional command-line Todo app built with Node.js using `commander` for CLI interface and `chalk` for colorful outputs. All todos are saved to a `todo.txt` file.
+A command-line todo list for Node.js, built with [Commander](https://github.com/tj/commander.js) for argument parsing and [Chalk](https://github.com/chalk/chalk) for coloured output. Todos are stored as lines in `todo.txt`.
 
-📦 Features
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 
-- Add new todos
-- Show all todos (color-coded by completion)
-- Delete last todo
-- Edit a specific todo
-- Mark a todo as complete
-🚀 How to Use
-
-1. Clone the repository and install dependencies:
+## Install
 
 ```bash
+git clone https://github.com/yuvrajnode/cli-todo-app.git
+cd cli-todo-app
 npm install
 ```
 
-2. Run the CLI using:
+## Usage
 
 ```bash
-node index.js <command>
+node index.js <command> [arguments]
 ```
 
-Commands
+| Command | Description | Example |
+|---|---|---|
+| `add <todo>` | Add a todo | `node index.js add "Buy groceries"` |
+| `show` | List all todos, colour-coded by status | `node index.js show` |
+| `edit <old> <new>` | Rename a todo | `node index.js edit "Buy groceries" "Buy vegetables"` |
+| `complete <todo>` | Mark a todo as done | `node index.js complete "Buy vegetables"` |
+| `delete` | Remove the most recent todo | `node index.js delete` |
+| `--help` | Show all commands | `node index.js --help` |
 
-```bash
-node index.js add "Buy groceries"
-node index.js show
-node index.js delete
-node index.js edit "Buy groceries" "Buy vegetables"
-node index.js complete "Buy vegetables"
-```
+## License
 
-🛠 Built With
-
-- Node.js
-- Commander.js
-- Chalk
-- FS module
-
-📁 File
-
-- `todo.txt` – stores your todos line by line
+MIT © Yuvraj Singh
